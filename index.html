@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping Cart</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="app" style="display: flex">
+      <div>
+        <div class="banner">
+          <div class="main-cart">
+            <div class="card">
+              <div class="top-bar">
+                <i class="fab fa-apple"></i>
+                <em class="stocks">In Stock</em>
+              </div>
+              <div class="img-container">
+                <img
+                  class="product-img"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJiKtlpQGkIeOyAPV3qQMNkl8uuRzfGWZtIDb_WgDnam8WjhpL&amp;usqp=CAU"
+                  alt="#"
+                />
+                <div class="out-of-stock-cover">
+                  <span>Out Of Stock</span>
+                </div>
+              </div>
+              <div class="details">
+                <div class="name-fav">
+                  <strong class="product-name">Airpods Pro</strong>
+                  <button onclick="this.classList.toggle('fav')" class="heart">
+                    <i class="fa fa-heart"></i>
+                  </button>
+                </div>
+                <div class="wrapper">
+                  <h5>Wireless Noise Cancelling Earphones</h5>
+                  <p>
+                    AirPods Pro have been designed to deliver active Noise
+                    Cancellation for immersive sound. Transparancy mode so much
+                    can hear your surroundings.
+                  </p>
+                </div>
+                <div class="purchase">
+                  <p class="product-price">$ 400</p>
+                  <span class="btn-add">
+                    <div>
+                      <button onclick="addItem(this)" class="add-btn"></button>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="top-bar">
+                <i class="fab fa-apple"></i>
+                <em class="stocks">In Stock</em>
+              </div>
+              <div class="img-container">
+                <img
+                  class="product-img"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJiKtlpQGkIeOyAPV3qQMNkl8uuRzfGWZtIDb_WgDnam8WjhpL&amp;usqp=CAU"
+                  alt="#"
+                />
+                <div class="out-of-stock-cover">
+                  <span>Out Of Stock</span>
+                </div>
+              </div>
+              <div class="details">
+                <div class="name-fav">
+                  <strong class="product-name">Airpods Pro</strong>
+                  <button onclick="this.classList.toggle('fav')" class="heart">
+                    <i class="fa fa-heart"></i>
+                  </button>
+                </div>
+                <div class="wrapper">
+                  <h5>Wireless Noise Cancelling Earphones</h5>
+                  <p>
+                    AirPods Pro have been designed to deliver active Noise
+                    Cancellation for immersive sound. Transparancy mode so much
+                    can hear your surroundings.
+                  </p>
+                </div>
+                <div class="purchase">
+                  <p class="product-price">$ 400</p>
+                  <span class="btn-add">
+                    <div>
+                      <button onclick="addItem(this)" class="add-btn"></button>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="top-bar">
+                <i class="fab fa-apple"></i>
+                <em class="stocks">In Stock</em>
+              </div>
+              <div class="img-container">
+                <img
+                  class="product-img"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJiKtlpQGkIeOyAPV3qQMNkl8uuRzfGWZtIDb_WgDnam8WjhpL&amp;usqp=CAU"
+                  alt="#"
+                />
+                <div class="out-of-stock-cover">
+                  <span>Out Of Stock</span>
+                </div>
+              </div>
+              <div class="details">
+                <div class="name-fav">
+                  <strong class="product-name">Airpods Pro</strong>
+                  <button onclick="this.classList.toggle('fav')" class="heart">
+                    <i class="fa fa-heart"></i>
+                  </button>
+                </div>
+                <div class="wrapper">
+                  <h5>Wireless Noise Cancelling Earphones</h5>
+                  <p>
+                    AirPods Pro have been designed to deliver active Noise
+                    Cancellation for immersive sound. Transparancy mode so much
+                    can hear your surroundings.
+                  </p>
+                </div>
+                <div class="purchase">
+                  <p class="product-price">$ 400</p>
+                  <span class="btn-add">
+                    <div>
+                      <button onclick="addItem(this)" class="add-btn"></button>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="top-bar">
+                <i class="fab fa-apple"></i>
+                <em class="stocks">In Stock</em>
+              </div>
+              <div class="img-container">
+                <img
+                  class="product-img"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJiKtlpQGkIeOyAPV3qQMNkl8uuRzfGWZtIDb_WgDnam8WjhpL&amp;usqp=CAU"
+                  alt="#"
+                />
+                <div class="out-of-stock-cover">
+                  <span>Out Of Stock</span>
+                </div>
+              </div>
+              <div class="details">
+                <div class="name-fav">
+                  <strong class="product-name">Airpods Pro</strong>
+                  <button onclick="this.classList.toggle('fav')" class="heart">
+                    <i class="fa fa-heart"></i>
+                  </button>
+                </div>
+                <div class="wrapper">
+                  <h5>Wireless Noise Cancelling Earphones</h5>
+                  <p>
+                    AirPods Pro have been designed to deliver active Noise
+                    Cancellation for immersive sound. Transparancy mode so much
+                    can hear your surroundings.
+                  </p>
+                </div>
+                <div class="purchase">
+                  <p class="product-price">$ 400</p>
+                  <span class="btn-add">
+                    <div>
+                      <button onclick="addItem(this)" class="add-btn"></button>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="top-bar">
+                <i class="fab fa-apple"></i>
+                <em class="stocks">In Stock</em>
+              </div>
+              <div class="img-container">
+                <img
+                  class="product-img"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJiKtlpQGkIeOyAPV3qQMNkl8uuRzfGWZtIDb_WgDnam8WjhpL&amp;usqp=CAU"
+                  alt="#"
+                />
+                <div class="out-of-stock-cover">
+                  <span>Out Of Stock</span>
+                </div>
+              </div>
+              <div class="details">
+                <div class="name-fav">
+                  <strong class="product-name">Airpods Pro</strong>
+                  <button onclick="this.classList.toggle('fav')" class="heart">
+                    <i class="fa fa-heart"></i>
+                  </button>
+                </div>
+                <div class="wrapper">
+                  <h5>Wireless Noise Cancelling Earphones</h5>
+                  <p>
+                    AirPods Pro have been designed to deliver active Noise
+                    Cancellation for immersive sound. Transparancy mode so much
+                    can hear your surroundings.
+                  </p>
+                </div>
+                <div class="purchase">
+                  <p class="product-price">$ 400</p>
+                  <span class="btn-add">
+                    <div>
+                      <button onclick="addItem(this)" class="add-btn"></button>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav">
+            <button onclick="sideNav(1)">
+              <i class="fa fa-shopping-cart"></i>
+            </button>
+            <span class="total-qty">0</span>
+          </div>
+          <div onclick="sideNav(0)" class="cover" style="display: none"></div>
+          <div class="cover purchase-cover"></div>
+          <div class="cart">
+            <div class="side-nav" style="right: -100%">
+              <button onclick="sideNav(0)">
+                <i class="fa fa-times"></i>
+              </button>
+              <h2>Cart</h2>
+              <div class="cart-items">
+                <span class="empty-cart"
+                  >Looks Like You Haven't Added Any Product In The Cart</span
+                >
+              </div>
+              <div class="final">
+                <strong>
+                  Total: $
+                  <span class="total">0</span>
+                </strong>
+                <div class="action">
+                  <button onclick="buy(1)" class="btn buy"></button>
+                  <button onclick="clearCart()" class="btn clear"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stock-limit">
+            <em>You Can Only Buy 10 Items For Each Product</em>
+            <button class="btn-ok" onclick="limitPurchase(this)">Okay</button>
+          </div>
+          <div class="order-now"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
