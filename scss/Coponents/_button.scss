@@ -6,3 +6,16 @@ button {
   cursor: pointer;
   transition: 0.5s;
 }
+
+.btn-ok {
+  position: absolute;
+  width: 80%;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin: auto;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  background: #5bc0be;
+}

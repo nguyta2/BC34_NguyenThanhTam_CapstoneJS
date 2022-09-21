@@ -35,12 +35,41 @@
 
     <!-- main css -->
     <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- main js -->
+    <script defer src="./js/Products.js"></script>
+    <script defer src="./js/Service.js"></script>
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
-    <div class="app" style="display: flex">
+    <nav
+      style="background: linear-gradient(to left, #8942a8, #ba382f)"
+      class="nav navbar px-5"
+    >
+      <a style="color: black" href="./productMange.html" class="navbar-brand"
+        ><i class="fa fa-cog"></i
+      ></a>
+      <select id="phoneType" onchange="filterProduct()">
+        <option value="all">All</option>
+        <option value="iphone">Iphone</option>
+        <option value="samsung">Samsung</option>
+      </select>
+      <div style="position: relative" class="form-inline">
+        <button
+          onclick="sideNav(1)"
+          class="btn btn-outline-success my-2 my-sm-0"
+        >
+          <i class="fa fa-shopping-cart"></i>
+        </button>
+        <span class="total-qty">0</span>
+      </form>
+    </nav>
+    <div onclick="sideNav(0)" class="cover" style="display: none"></div>
+    <div class="cover purchase-cover" style="display: none"></div>
+    <div id="app">
       <div>
         <div class="banner">
-          <div class="main-cart">
+          <div id="main-cart" class="main-cart">
             <div class="card">
               <div class="top-bar">
                 <i class="fab fa-apple"></i>
@@ -49,7 +78,7 @@
               <div class="img-container">
                 <img
                   class="product-img"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJiKtlpQGkIeOyAPV3qQMNkl8uuRzfGWZtIDb_WgDnam8WjhpL&amp;usqp=CAU"
+                  src="https://cdn.tgdd.vn/Products/Images/42/114115/iphone-x-64gb-hh-600x600.jpg"
                   alt="#"
                 />
                 <div class="out-of-stock-cover">
@@ -58,24 +87,26 @@
               </div>
               <div class="details">
                 <div class="name-fav">
-                  <strong class="product-name">Airpods Pro</strong>
+                  <strong class="product-name">iphoneX</strong>
                   <button onclick="this.classList.toggle('fav')" class="heart">
                     <i class="fa fa-heart"></i>
                   </button>
                 </div>
                 <div class="wrapper">
-                  <h5>Wireless Noise Cancelling Earphones</h5>
-                  <p>
-                    AirPods Pro have been designed to deliver active Noise
-                    Cancellation for immersive sound. Transparancy mode so much
-                    can hear your surroundings.
-                  </p>
+                  <h5 class="type">iphone</h5>
+                  <p class="desc">Thiết kế mang tính đột phá</p>
+                  <p class="screen">screen 68</p>
+                  <p class="frontCamera">Front camera: 7 MP</p>
+                  <p class="backCamera">Back camera: 2 camera 12 MP</p>
                 </div>
                 <div class="purchase">
                   <p class="product-price">$ 400</p>
                   <span class="btn-add">
                     <div>
-                      <button onclick="addItem(this)" class="add-btn"></button>
+                      <button onclick="addItem(this)" class="add-btn">
+                        Add
+                        <i class="fa fa-angle-right"></i>
+                      </button>
                     </div>
                   </span>
                 </div>
@@ -115,7 +146,10 @@
                   <p class="product-price">$ 400</p>
                   <span class="btn-add">
                     <div>
-                      <button onclick="addItem(this)" class="add-btn"></button>
+                      <button onclick="addItem(this)" class="add-btn">
+                        Add
+                        <i class="fa fa-angle-right"></i>
+                      </button>
                     </div>
                   </span>
                 </div>
@@ -155,7 +189,10 @@
                   <p class="product-price">$ 400</p>
                   <span class="btn-add">
                     <div>
-                      <button onclick="addItem(this)" class="add-btn"></button>
+                      <button onclick="addItem(this)" class="add-btn">
+                        Add
+                        <i class="fa fa-angle-right"></i>
+                      </button>
                     </div>
                   </span>
                 </div>
@@ -195,61 +232,16 @@
                   <p class="product-price">$ 400</p>
                   <span class="btn-add">
                     <div>
-                      <button onclick="addItem(this)" class="add-btn"></button>
-                    </div>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="top-bar">
-                <i class="fab fa-apple"></i>
-                <em class="stocks">In Stock</em>
-              </div>
-              <div class="img-container">
-                <img
-                  class="product-img"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJiKtlpQGkIeOyAPV3qQMNkl8uuRzfGWZtIDb_WgDnam8WjhpL&amp;usqp=CAU"
-                  alt="#"
-                />
-                <div class="out-of-stock-cover">
-                  <span>Out Of Stock</span>
-                </div>
-              </div>
-              <div class="details">
-                <div class="name-fav">
-                  <strong class="product-name">Airpods Pro</strong>
-                  <button onclick="this.classList.toggle('fav')" class="heart">
-                    <i class="fa fa-heart"></i>
-                  </button>
-                </div>
-                <div class="wrapper">
-                  <h5>Wireless Noise Cancelling Earphones</h5>
-                  <p>
-                    AirPods Pro have been designed to deliver active Noise
-                    Cancellation for immersive sound. Transparancy mode so much
-                    can hear your surroundings.
-                  </p>
-                </div>
-                <div class="purchase">
-                  <p class="product-price">$ 400</p>
-                  <span class="btn-add">
-                    <div>
-                      <button onclick="addItem(this)" class="add-btn"></button>
+                      <button onclick="addItem(this)" class="add-btn">
+                        Add
+                        <i class="fa fa-angle-right"></i>
+                      </button>
                     </div>
                   </span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="nav">
-            <button onclick="sideNav(1)">
-              <i class="fa fa-shopping-cart"></i>
-            </button>
-            <span class="total-qty">0</span>
-          </div>
-          <div onclick="sideNav(0)" class="cover" style="display: none"></div>
-          <div class="cover purchase-cover"></div>
           <div class="cart">
             <div class="side-nav" style="right: -100%">
               <button onclick="sideNav(0)">
@@ -267,13 +259,19 @@
                   <span class="total">0</span>
                 </strong>
                 <div class="action">
-                  <button onclick="buy(1)" class="btn buy"></button>
-                  <button onclick="clearCart()" class="btn clear"></button>
+                  <button onclick="buy(1)" class="btn buy">
+                    Purchase
+                    <i class="fa fa-credit-card" style="color: #6665dd"></i>
+                  </button>
+                  <button onclick="clearCart()" class="btn clear">
+                    Clear Cart
+                    <i class="fa fa-trash" style="color: #bb342f"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="stock-limit">
+          <div class="stock-limit" style="display: none">
             <em>You Can Only Buy 10 Items For Each Product</em>
             <button class="btn-ok" onclick="limitPurchase(this)">Okay</button>
           </div>
@@ -297,6 +295,14 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
+    ></script>
+
+    <!-- AXIOS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
   </body>
 </html>

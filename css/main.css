@@ -29,12 +29,37 @@ button {
   transition: 0.5s;
 }
 
+.btn-ok {
+  position: absolute;
+  width: 80%;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin: auto;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  background: #5bc0be;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
 .banner {
   position: relative;
   height: 100vh;
   width: 100vw;
   background: linear-gradient(to left, #8942a8, #ba382f);
-  display: flex;
+  overflow: hidden;
 }
 .banner .main-cart {
   position: absolute;
@@ -79,9 +104,10 @@ button {
   left: 0;
   right: 0;
   transform: translateY(35px);
+  justify-content: center;
 }
 .banner .main-cart .card .img-container img {
-  width: 100%;
+  width: 80%;
   align-self: center;
 }
 .banner .main-cart .card .img-container .out-of-stock-cover {
@@ -100,7 +126,7 @@ button {
 }
 .banner .main-cart .card .details {
   position: absolute;
-  height: 220px;
+  height: 240px;
   width: 100%;
   background-color: #2e2f33;
   border-radius: 20px;
@@ -121,10 +147,17 @@ button {
   justify-content: space-between;
   transform: translateY(5px);
   display: none;
+  line-height: normal;
+}
+.banner .main-cart .card .details .wrapper h5 {
+  display: block;
+  font-size: 0.83rem;
+  margin-bottom: 0px;
 }
 .banner .main-cart .card .details .wrapper p {
   font-size: 0.9rem;
-  padding: 5px;
+  padding: 5px 0;
+  margin-bottom: 0px;
 }
 .banner .main-cart .card .details .purchase {
   width: 100%;
@@ -133,6 +166,7 @@ button {
 }
 .banner .main-cart .card .details .purchase p {
   font-weight: 500;
+  margin-bottom: 0px;
 }
 .banner .main-cart .card .details .purchase .add-btn {
   border-radius: 20px;
@@ -140,4 +174,285 @@ button {
   background: none;
   color: #ffffff;
   padding: 6px 10px;
+  font-size: 13px;
+  line-height: normal;
+}
+.banner .main-cart .card .details .purchase .add-btn:hover {
+  background-color: white;
+  color: black;
+}
+.banner .main-cart .card:hover {
+  height: 450px;
+  width: 260px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.banner .main-cart .card:hover .details {
+  bottom: 0;
+}
+.banner .main-cart .card:hover .details .wrapper {
+  display: block;
+}
+.banner .fa-shopping-cart {
+  position: absolute;
+  right: 2rem;
+  top: 1.2rem;
+  color: black;
+  font-size: 2rem;
+}
+.banner .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: none;
+}
+.banner .side-nav {
+  position: absolute;
+  background-color: #010101;
+  opacity: 0.95;
+  height: 100%;
+  width: 60%;
+  flex-direction: column;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.banner .side-nav h2 {
+  align-self: center;
+  transform: translateY(1rem);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.banner .side-nav .cart-items {
+  position: absolute;
+  width: 90%;
+  margin: 0 5%;
+  height: 50%;
+  top: 10%;
+  flex-direction: column;
+}
+.banner .side-nav .cart-items .empty-cart {
+  margin: auto 0;
+  font-size: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.25);
+}
+.banner .side-nav .cart-items .cart-item {
+  height: 5rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid whitesmoke;
+}
+.banner .side-nav .cart-items .cart-item .cart-img {
+  width: 5rem;
+  height: 5rem;
+  justify-content: center;
+}
+.banner .side-nav .cart-items .cart-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+.banner .side-nav .final {
+  position: absolute;
+  align-self: flex-end;
+  flex-direction: column;
+  bottom: 10%;
+}
+.banner .side-nav .final strong {
+  align-self: flex-end;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 20px;
+  margin-bottom: 1rem;
+}
+.banner .side-nav .final .action {
+  justify-content: space-evenly;
+}
+.banner .side-nav .final .action .btn {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: 1px solid white;
+  margin-right: 20px;
+  border-radius: 10px;
+  color: white;
+}
+.banner .side-nav .final .action .btn:hover {
+  color: black;
+  box-shadow: inset 20em 0 0 0 white;
+}
+.banner .side-nav .fa-times {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 1.5rem;
+}
+.banner .stock-limit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 20px;
+  background-color: #010101;
+  width: 400px;
+  height: 180px;
+  flex-direction: column;
+  display: none;
+}
+.banner .stock-limit em {
+  position: absolute;
+  width: 80%;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  line-height: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.banner .stock-limit .btn-ok {
+  position: absolute;
+  width: 80%;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin: auto;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  background-color: #5bc0be;
+}
+
+.qty-change {
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.btn-qty {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+
+.btn-qty:hover {
+  background: white;
+  color: black;
+}
+
+.qty {
+  padding: 2px 5px;
+  margin-bottom: 0px;
+}
+
+.fav {
+  color: red;
+}
+
+.invoice {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.95);
+  padding: 5% 4%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  align-self: center;
+  flex-direction: column;
+  border-radius: 20px;
+  transition: 0.25s;
+}
+.invoice .shipping-items {
+  padding: 10px 0;
+  width: 100%;
+  justify-content: space-between;
+}
+.invoice .shipping-items .item-names, .invoice .shipping-items .items-price {
+  flex-direction: column;
+  justify-content: space-around;
+}
+.invoice .payment {
+  flex-direction: column;
+}
+.invoice .payment em, .invoice .payment div {
+  margin-top: 10px;
+  font-weight: 600;
+  justify-content: space-between;
+}
+.invoice .order {
+  position: absolute;
+  bottom: 10%;
+  width: 40%;
+  justify-content: space-around;
+}
+.invoice .order .btn {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+.invoice .order .btn-order {
+  background: #00bbf9;
+}
+.invoice .order .btn-cancel {
+  background: #bb342f;
+}
+.invoice .order-details {
+  height: 300px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.invoice .order-details em, .invoice .order-details p {
+  border-bottom: 1px dashed white;
+  padding-bottom: 10px;
+}
+.invoice .order-details em {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.invoice .order-details .thanks {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  border: none;
+  left: 0;
+  right: 0;
+  bottom: 55%;
+}
+.invoice .order-details p {
+  font-size: 1.1rem;
+}
+.invoice .order-details p span {
+  font-weight: 600;
+}
+
+.nav #phoneType {
+  color: white;
+  display: inline-block;
+  height: 10%;
+  background-color: dodgerblue;
+  text-align: center;
+}
+
+.total-qty {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  border: 1px solid white;
+  text-align: center;
+  line-height: 1rem;
+  font-weight: 600;
+  top: 0rem;
+  left: 1.8rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=main.css.map */
