@@ -111,7 +111,9 @@ function RenderCart() {
 }
 
 function DisplayCartItems() {
-  return cartDetails.map((e) => CartItems(e)).join("");
+  if (cartDetails) {
+    return cartDetails.map((e) => CartItems(e)).join("");
+  }
 }
 
 function CartItemsTotal() {
