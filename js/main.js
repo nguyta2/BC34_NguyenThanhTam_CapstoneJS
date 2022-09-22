@@ -117,10 +117,12 @@ function DisplayCartItems() {
 }
 
 function CartItemsTotal() {
-  let e = cartDetails.reduce((e, t) => e + t.price * t.quantity, 0),
-    t = cartDetails.reduce((e, t) => e + t.quantity, 0);
-  (document.getElementsByClassName("total")[0].innerText = e),
-    (document.getElementsByClassName("total-qty")[0].innerText = t);
+  if (cartDetails) {
+    let e = cartDetails.reduce((e, t) => e + t.price * t.quantity, 0),
+      t = cartDetails.reduce((e, t) => e + t.quantity, 0);
+    (document.getElementsByClassName("total")[0].innerText = e),
+      (document.getElementsByClassName("total-qty")[0].innerText = t);
+  }
 }
 
 function limitPurchase(e) {
