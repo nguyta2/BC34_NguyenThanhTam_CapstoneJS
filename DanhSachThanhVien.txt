@@ -1,0 +1,3 @@
+Họ và tên: Nguyễn Thanh Tâm
+Bài tập: Capstone JS
+Lớp: BC34
